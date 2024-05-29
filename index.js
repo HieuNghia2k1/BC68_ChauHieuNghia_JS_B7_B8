@@ -88,9 +88,14 @@ let arrsoN = [];
 document.getElementById("btnThemSoN").onclick = function () {
   // truy xuat data user
   let soN = document.getElementById("soN").value * 1;
+  // thêm mới và lưu trữ giá trị của mảng
   arrsoN.push(soN);
   console.log(arrsoN);
 };
+
+let btnReset = (document.getElementById("btnReset").onclick = function () {
+  btnReset.reset();
+});
 
 document.getElementById("btn1").onclick = function () {
   // sử dụng mảng arrsoN để tính
@@ -108,4 +113,30 @@ document.getElementById("btn1").onclick = function () {
     " " +
     "Tổng các số dương của mảng: " +
     tong;
+};
+
+// 2. Đếm có bao nhiêu phần tử số dương trong mảng
+document.getElementById("btn2").onclick = function () {
+  let count = 0;
+  //   i;
+  // for (i = 0; i < soN; i++) {
+  //   if (arrsoN[i] > 0) {
+  //     count++;
+  //   }
+  //   return count;
+  // }
+  // console.log(count);
+  for (let item of arrsoN) {
+    console.log(item);
+    if (item >= 0) {
+      count += item;
+    }
+    console.log(count);
+  }
+};
+
+// 7. Sắp xếp mảng theo thứ tự tăng dần
+document.getElementById("btn7").onclick = function () {
+  arrsoN.sort((a, b) => a - b);
+  console.log(arrsoN);
 };
