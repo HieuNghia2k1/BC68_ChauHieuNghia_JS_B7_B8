@@ -138,3 +138,13 @@ document.getElementById("btn7").onclick = function () {
     `Thứ tự mảng tăng dần của mảng vừa nhập:  +
     [${arrSoN2.join(", ")}]`;
 };
+
+// 3. Số nhỏ nhất trong mảng
+document.getElementById("btn3").onclick = function () {
+  let arr3 = (arrsoN = [0]),
+    i;
+  if (((arr3 = arrsoN = [0]), arr3 < arrsoN[i], i++)) {
+    return (arr3 = arrsoN[i]);
+    console.log(arr3);
+  }
+};
