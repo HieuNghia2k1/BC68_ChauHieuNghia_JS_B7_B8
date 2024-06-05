@@ -66,3 +66,28 @@ document.getElementById("btn3").onclick = function () {
     console.log(min);
   }
 };
+
+// 4. Số dương nhỏ nhất trong mảng
+document.getElementById("btn4").onclick = findSmallestPositiveNumber();
+
+function findSmallestPositiveNumber(arrsoN) {
+  // Kiểm tra nếu arr không phải là mảng hoặc không tồn tại
+  // if (!Array.isArray(arrsoN)) {
+  //   throw new TypeError("Input must be an array");
+  // }
+
+  // Lọc các số dương từ mảng
+  let positiveNumbers = arrsoN.filter((number) => number > 0);
+
+  // Kiểm tra nếu không có số dương nào trong mảng
+  if (positiveNumbers.length === 0) {
+    return null; // hoặc trả về một giá trị nào đó phù hợp
+  }
+
+  // Tìm số dương nhỏ nhất
+  let smallestPositiveNumber = Math.min(...positiveNumbers);
+
+  return smallestPositiveNumber;
+}
+
+// Ví dụ sử dụng
